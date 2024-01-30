@@ -1,0 +1,64 @@
+
+.navigationBar{
+
+}
+
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background-color: rgb(203, 232, 222, 0.6);
+    box-shadow: 3px 0px 15px rgb(92, 212, 132) ;
+    padding: 0px 60px;
+}
+
+.todoLogo{
+    font-size: 30px;
+    padding: 7px 0px;
+    font-weight: bold;
+}
+
+.todoLogo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(22, 41, 58);
+}
+
+.todoLogo img{
+    height: 50px;
+    width: 80px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.menu a{
+    color: #159c6f;
+    font-size: 18px;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.menu .homeAndAbout{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu .signInAndSignUp{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu a:hover{
+    color: rgb(3, 99, 143);
+}
+

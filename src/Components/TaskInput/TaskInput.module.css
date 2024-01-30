@@ -1,0 +1,151 @@
+
+
+
+
+/* add todo section start*/
+.addTodo_Section{
+    background-color: rgb(251, 251, 251);
+    margin-block: 10px;
+    box-shadow: 2px 2px 15px rgb(107, 182, 107);
+}
+
+.addTodo_Section h2{
+    padding: 50px 0px 0px 400px;
+}
+
+.addTodo_Content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 70px;
+
+}
+
+.addTodo_Banners img{
+    max-width: 500px;
+    transition: all .3s ease;
+}
+
+.addTodo_Banners img:hover,
+.bannerImage img:hover{
+    transform: scale(1.1);
+
+}
+
+.addTodo_Input{
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgb(16, 17, 66);
+    padding: 40px 30px;
+    text-align: center;
+    margin-left: 50px;
+    transition: all .3s ease;
+}
+
+.addTodo_Input:hover{
+    transform:scale(1.1);
+}
+
+.addTodo_Title{
+    font-size: 30px;
+    color: #001233;
+    margin-bottom: 50px;
+    border-bottom: 3px solid rgb(121, 190, 181);
+    text-shadow: 2px 2px 3px rgb(117, 154, 168);
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    width: 410px;
+    font-size: 19px;
+    padding: 16px;
+    border-radius: 2px;
+    outline-color: #0b6d10;
+    color: #001233;
+    box-shadow: 3px 3px 5px rgb(108, 125, 173);
+    border: none;
+    color:rgb(88, 88, 88);
+}
+
+.addBtn{
+    font-size: 19px;
+    padding: 14px;
+    border-radius: 2px;
+    margin-left: 10px;
+    background-color: #0bad92;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-top: 3px solid rgb(87, 224, 128);
+    border-bottom: 3px solid rgb(87, 224, 128);
+    box-shadow: 2px 2px 5px rgb(162, 221, 216);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.addBtn:hover{
+    background-color: #0ba1ac;
+    color: #4a5c3e;
+    box-shadow: 2px 2px 5px rgb(39, 146, 137);
+}
+
+/* add todo section end*/
+
+
+
+
+
+
+
+
+
+
+.tasks_list_management{
+    padding: 20px 70px;
+    background-color: rgb(255, 255, 255);
+}
+.tasks_list{
+    border: 1px solid green;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.tasks_list_title h1{
+    font-size: 30px;
+    color: #001233;
+    margin-bottom: 50px;
+    border-bottom: 3px solid rgb(121, 190, 181);
+    text-shadow: 2px 2px 3px rgb(117, 154, 168);
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgb(148, 225, 171);
+}
+
+.emptyBox{
+    position: relative;
+}
+
+.emptyBox h3{
+    position: absolute;
+    top: 90px;
+    left: 400px;
+    font-size: 16px;
+    color: #f8f8f8;
+    padding: 4px;
+    font-style: italic;
+    background-color:rgba(236, 26, 219, 0.4);
+    border-radius: 3px;
+    padding: 10px 15px;
+    transform: rotate(30deg);
+}
+
+.emptyBoxImage{
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+}
+.emptyBoxImage img{
+    max-width: 400px;
+    margin-top: -50px;
+}

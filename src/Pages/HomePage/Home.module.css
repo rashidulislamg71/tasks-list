@@ -1,0 +1,45 @@
+
+
+
+.heroSection{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(251, 251, 251);
+    padding: 20px 70px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 15px rgb(167, 225, 188);
+    
+}
+
+.HomeContent{
+    text-align: center;
+    width: 600px;
+    margin-top: 85px;
+}
+.title{
+    font-size: 20px;
+    color: #0b6d10;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+.motivation_Text{
+    margin-top: 20px;
+}
+
+.motivation_Text p{
+    text-align: justify;
+    font-size: 20px;
+    color: #001233; 
+}
+
+.bannerImage img{
+    max-width: 500px;
+    transition: all .3s ease;
+}
+
+
+
+
+

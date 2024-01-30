@@ -1,0 +1,81 @@
+
+
+.task_list{
+    margin-bottom: 10px;
+    border-radius: 2px;
+    width: 800px;
+    margin: auto;
+}
+
+.single_task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 2px;
+    font-size: 20px;
+    box-shadow: 2px 2px 10px rgb(167, 225, 188);
+    transition: all .3s ease;
+}
+.single_task:hover{
+    box-shadow: 2px 2px 10px rgb(95, 180, 162);
+}
+
+.completeBtnAndData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.compledBtn{
+    cursor: pointer;
+}
+
+.checkingTask{
+
+}
+
+.taskElement{
+
+}
+
+.data{
+    max-width: 600px;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+.data span{
+    text-align: left;
+}
+
+
+.editAndDeleteBtn{
+    
+}
+
+.editBtn,
+.deleteBtn
+{
+    margin-right: 20px;
+    color: rgb(108, 168, 108);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.editBtn:hover{
+    color: rgb(90, 219, 90);
+}
+
+.deleteBtn{
+    color: rgb(228, 132, 132);
+    margin-right: 0px;
+}
+
+.deleteBtn:hover{
+    color: rgb(226, 67, 62);
+}
