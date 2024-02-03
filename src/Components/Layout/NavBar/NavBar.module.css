@@ -1,64 +1,94 @@
-
-.navigationBar{
-
+.navigationBar {
+  position: relative;
+  margin: 0 auto;
 }
 
-.NavBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    background-color: rgb(203, 232, 222, 0.6);
-    box-shadow: 3px 0px 15px rgb(92, 212, 132) ;
-    padding: 0px 60px;
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  background-color: rgb(203, 232, 222, 0.6);
+  box-shadow: 3px 0px 15px rgb(92, 212, 132);
+  padding: 0px 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  max-width: 1400px;
 }
 
-.todoLogo{
-    font-size: 30px;
-    padding: 7px 0px;
-    font-weight: bold;
+.todoLogo {
+  font-size: 30px;
+  padding: 7px 0px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.todoLogo a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: rgb(22, 41, 58);
+.todoLogo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(22, 41, 58);
 }
 
-.todoLogo img{
-    height: 50px;
-    width: 80px;
+.todoLogo img {
+  height: 50px;
+  width: 80px;
 }
 
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 100px;
+.menu .homeAndAbout ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-.menu a{
-    color: #159c6f;
-    font-size: 18px;
-    /* text-transform: uppercase; */
-    text-decoration: none;
-    font-weight: 600;
-    transition: all .3s ease;
+.menu .homeAndAbout ul li {
+  list-style: none;
+  margin-top: 4px;
 }
 
-.menu .homeAndAbout{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+.menu .homeAndAbout ul li a {
+  display: inline-block;
+  color: #159c6f;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
-.menu .signInAndSignUp{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+.menu .homeAndAbout ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(21, 156, 111);
+  transition: all 0.3s ease;
 }
 
-.menu a:hover{
-    color: rgb(3, 99, 143);
+.menu .homeAndAbout ul li a:hover::after {
+  color: rgb(3, 99, 143);
+  width: 100%;
 }
 
+.showMenu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  color: #074f70;
+  font-size: 20px;
+}
+
+.checkbox {
+  display: none;
+}
+
+@media (max-width: 768px) {
+ 
+}

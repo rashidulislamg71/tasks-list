@@ -1,5 +1,4 @@
 
-
 .task_list{
     margin-bottom: 10px;
     border-radius: 2px;
@@ -12,27 +11,31 @@
     justify-content: space-between;
     align-items: center; 
     gap: 20px;
-    padding: 20px;
+    padding: 15px;
     margin-top: 10px;
     border-radius: 2px;
-    font-size: 20px;
-    box-shadow: 2px 2px 10px rgb(167, 225, 188);
+    font-size: 18px;
+    box-shadow: 0px 2px 1px rgb(167, 225, 188);
     transition: all .3s ease;
 }
+
 .single_task:hover{
-    box-shadow: 2px 2px 10px rgb(95, 180, 162);
+    box-shadow: 0px 2px 10px rgba(78, 190, 125, 0.808);
 }
 
 .completeBtnAndData{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
-.compledBtn{
+input.compledBtn{
     cursor: pointer;
+    font-size: 20px;
 }
+
+
 
 .checkingTask{
 
@@ -53,27 +56,39 @@
 }
 
 
-.editAndDeleteBtn{
-    
+.dateAndEditAndDeleteBtn{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
+.date{
+    color: rgb(56, 14, 43);
+}
+
+.updateBtn{
+    font-size: 20px;
+}
+
+.updateBtn,
 .editBtn,
-.deleteBtn
-{
-    margin-right: 20px;
+.deleteBtn{
     color: rgb(108, 168, 108);
     font-size: 22px;
     cursor: pointer;
     transition: all .3s ease;
 }
 
-.editBtn:hover{
+.editBtn:hover,
+.updateBtn{
     color: rgb(90, 219, 90);
 }
 
 .deleteBtn{
     color: rgb(228, 132, 132);
     margin-right: 0px;
+    font-size: 20px;
 }
 
 .deleteBtn:hover{

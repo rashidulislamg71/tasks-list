@@ -117,13 +117,6 @@
 
 // export default TaskInput;
 
-
-
-
-
-
-
-
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React, { useState } from "react";
@@ -160,14 +153,13 @@ const TaskInput = () => {
     setTasksList(updatedTasks);
   };
 
-
   // Delete Task
   const deleteTask = (id) => {
     setTasksList((prevTasks) => prevTasks.filter((task) => task.id !== id));
   };
 
   return (
-    <div>
+    <div id="addTask">
       <div className={styles.addTodo_Section}>
         <div className={styles.addTodo_Content}>
           <div className={styles.addTodo_Input}>
@@ -184,10 +176,7 @@ const TaskInput = () => {
                   placeholder="Enter Your Task"
                   autoFocus
                 />
-                <button className={styles.addBtn}>
-                  {/* {isEditTask ? "Update Task" : "Add Task"} */}
-                  Add Task
-                </button>
+                <button className={styles.addBtn}>Add Task</button>
               </form>
             </div>
           </div>
@@ -197,8 +186,36 @@ const TaskInput = () => {
           </div>
         </div>
       </div>
+      <div id="tasksList">
+        <div className={styles.tasks_list_management}>
+          <ol className={styles.tasks_list}>
+            <div className={styles.tasks_list_title}>
+              <h1>Your Most important Tasks List:</h1>
+            </div>
 
-      <div className={styles.tasks_list_management}>
+            {tasksList && tasksList.length > 0 ? (
+              tasksList.map((data) => (
+                <div key={data.id}>
+                  <TasksList
+                    data={data.text}
+                    date={format(new Date(data.date), "MM/dd/yyyy HH:mm:ss")}
+                    deleteTask={() => deleteTask(data.id)}
+                    updateSingleTask={updateSingleTask}
+                    id={data.id}
+                  />
+                </div>
+              ))
+            ) : (
+              <div className={styles.emptyBox}>
+                <div className={styles.emptyBoxImage}>
+                  <img src={emptyBox} alt="Tasks Box Is Empty" />
+                </div>
+              </div>
+            )}
+          </ol>
+        </div>
+      </div>
+      {/* <div className={styles.tasks_list_management}>
         <ol className={styles.tasks_list}>
           <div className={styles.tasks_list_title}>
             <h1>Your Most important Tasks List:</h1>
@@ -218,14 +235,14 @@ const TaskInput = () => {
             ))
           ) : (
             <div className={styles.emptyBox}>
-              <h3>Empty Tasks Box</h3>
+              <h3>Tasks Box Empty</h3>
               <div className={styles.emptyBoxImage}>
-                <img src={emptyBox} alt="Empty Tasks Box" />
+                <img src={emptyBox} alt="Tasks Box Is Empty" />
               </div>
             </div>
           )}
         </ol>
-      </div>
+      </div> */}
     </div>
   );
 };

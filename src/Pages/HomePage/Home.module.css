@@ -5,10 +5,10 @@
     display: flex;
     justify-content: space-between;
     background-color: rgb(251, 251, 251);
-    padding: 20px 70px;
-    margin-top: 10px;
-    box-shadow: 2px 2px 15px rgb(167, 225, 188);
-    
+    padding: 10px 60px;
+    margin-top:75px;
+    box-shadow: 3px 0px 15px rgb(92, 212, 132) ;
+
 }
 
 .HomeContent{
@@ -40,6 +40,73 @@
 }
 
 
+@media (max-width: 1080px) {
+    
+.heroSection{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(251, 251, 251);
+    padding: 10px 70px;
+    margin-top:75px;
+    box-shadow: 3px 0px 15px rgb(92, 212, 132) ;
 
+}
+
+.HomeContent{
+    margin-top: 70px;
+}
+.title{
+    font-size: 15px;
+}
+
+
+.motivation_Text{
+    margin-top: 15px;
+}
+
+.motivation_Text p{
+    font-size: 17px;
+}
+
+.bannerImage img{
+    max-width: 450px;
+}
+
+}
+
+
+@media (max-width: 1080px) {
+    
+.heroSection{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(251, 251, 251);
+    padding: 10px 70px;
+    margin-top:75px;
+    box-shadow: 3px 0px 15px rgb(92, 212, 132) ;
+
+}
+
+.HomeContent{
+    margin-top: 70px;
+}
+.title{
+    font-size: 15px;
+}
+
+
+.motivation_Text{
+    margin-top: 15px;
+}
+
+.motivation_Text p{
+    font-size: 17px;
+}
+
+.bannerImage img{
+    max-width: 450px;
+}
+
+}
 
 

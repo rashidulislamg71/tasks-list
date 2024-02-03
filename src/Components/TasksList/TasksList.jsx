@@ -73,11 +73,11 @@
 /* eslint-disable no-undef */
 import React, { useState } from "react";
 import styles from "./TasksList.module.css";
-import { MdArrowCircleRight, MdDelete } from "react-icons/md";
-import { MdMovieEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
+import { LiaEditSolid } from "react-icons/lia";
 import { RxUpdate } from "react-icons/rx";
 
-const TasksList = ({ data, date, deleteTask, id,updateSingleTask }) => {
+const TasksList = ({ data, date, deleteTask, id, updateSingleTask }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isEditTask, setisEditTask] = useState(false);
   const [updateTask, setUpdateTask] = useState(data);
@@ -93,9 +93,8 @@ const TasksList = ({ data, date, deleteTask, id,updateSingleTask }) => {
     setisEditTask(false);
   };
 
-
   return (
-    <div>
+    <div id="tasksList-Section">
       <div className={styles.tasks_list}>
         <div className={styles.single_task}>
           <div className={styles.completeBtnAndData}>
@@ -108,17 +107,20 @@ const TasksList = ({ data, date, deleteTask, id,updateSingleTask }) => {
                 value={isChecked}
               />
             </form>
-
             <div className={Symbol.checkingTask}>
               {isEditTask ? (
-                <><input
-                  type="text"
-                  value={updateTask}
-                  onChange={(e) => setUpdateTask(e.target.value)}
-                  autoFocus /><div>{date}</div></>
+                <>
+                  <input
+                    type="text"
+                    value={updateTask}
+                    onChange={(e) => setUpdateTask(e.target.value)}
+                    autoFocus
+                  />
+                  <div>{date}</div>
+                </>
               ) : (
-                
-                <><div
+                <div className={styles.dateAndData}>
+                  <div
                     className="taskElement"
                     style={{
                       textDecoration: isChecked ? "line-through" : "none",
@@ -128,22 +130,25 @@ const TasksList = ({ data, date, deleteTask, id,updateSingleTask }) => {
                     <div className={styles.data}>
                       <span>{data}</span>
                     </div>
-                  </div><div>{date}</div></>
+                  </div>
+                </div>
               )}
             </div>
           </div>
-          <div className={styles.editAndDeleteBtn}>
+
+          <div className={styles.dateAndEditAndDeleteBtn}>
+          <div className={styles.date}>{date}</div>
             {isEditTask ? (
-              <span title="Update" onClick={updateTaskFunction}>
+              <span title="Update" className={styles.updateBtn} onClick={updateTaskFunction}>
                 <RxUpdate />
               </span>
             ) : (
-              <span title="Edit" onClick={editingTask}>
-                <MdMovieEdit />
+              <span title="Edit" className={styles.editBtn} onClick={editingTask}>
+                <LiaEditSolid />
               </span>
             )}
 
-            <span onClick={deleteTask}>
+            <span title="Delete" className={styles.deleteBtn} onClick={deleteTask}>
               <MdDelete />
             </span>
           </div>

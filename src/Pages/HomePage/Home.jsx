@@ -1,12 +1,15 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import addTodoImage from "../../assets/Images/animation gif.gif";
-
 import TaskInput from "../../Components/TaskInput/TaskInput";
-import TasksList from "../../Components/TasksList/TasksList";
+import NavBar from "../../Components/Layout/NavBar/NavBar";
+import Footer from "../../Components/Layout/Footer/Footer";
 
 const Home = () => {
+
   const [text, setText] = useState("");
   const [displayedText, setDisplayedText] = useState("");
   const speed = 40; // Typing speed in milliseconds
@@ -35,7 +38,8 @@ const Home = () => {
   }, [text]);
 
   return (
-    <div>
+    <div id="home">
+      <NavBar />
       <div className={styles.heroSection}>
         <div className={styles.bannerImage}>
           <img src={addTodoImage} alt="Add Todo List" />
@@ -53,6 +57,7 @@ const Home = () => {
       </div>
 
       <TaskInput />
+      <Footer />
     </div>
   );
 };
