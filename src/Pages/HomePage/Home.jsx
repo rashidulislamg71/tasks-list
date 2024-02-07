@@ -9,7 +9,6 @@ import NavBar from "../../Components/Layout/NavBar/NavBar";
 import Footer from "../../Components/Layout/Footer/Footer";
 
 const Home = () => {
-
   const [text, setText] = useState("");
   const [displayedText, setDisplayedText] = useState("");
   const speed = 40; // Typing speed in milliseconds
@@ -46,12 +45,14 @@ const Home = () => {
         </div>
 
         <div className={styles.HomeContent}>
-          <div className={styles.title}>
-            <h3>Don't waste time.</h3>
-          </div>
+          <div className={styles.motivation}>
+            <div className={styles.title}>
+              <h3>Don't waste time.</h3>
+            </div>
 
-          <div className={styles.motivation_Text}>
-            <p>{displayedText}</p>
+            <div className={styles.motivation_Text}>
+              <p>{displayedText}</p>
+            </div>
           </div>
         </div>
       </div>
