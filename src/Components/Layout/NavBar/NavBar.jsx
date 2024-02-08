@@ -28,7 +28,7 @@ const NavBar = () => {
           <RxHamburgerMenu />
         </label>
         <div className={styles.todoLogo}>
-          <Link smooth to="home">
+          <Link to="home" spy={true} smooth={true} offset={-75} duration={400}>
             <img src={logoImage} alt="ToDo" />
             <span className="todoLogoTaxt">ToDo</span>
           </Link>
@@ -43,7 +43,7 @@ const NavBar = () => {
                   spy={true}
                   smooth={true}
                   offset={-75}
-                  duration={200}
+                  duration={400}
                 >
                   Home
                 </Link>
@@ -55,7 +55,7 @@ const NavBar = () => {
                   spy={true}
                   smooth={true}
                   offset={-75}
-                  duration={200}
+                  duration={400}
                 >
                   Add Task
                 </Link>
@@ -67,7 +67,7 @@ const NavBar = () => {
                   spy={true}
                   smooth={true}
                   offset={-75}
-                  duration={200}
+                  duration={400}
                 >
                   Tasks List
                 </Link>

@@ -77,6 +77,8 @@ import { MdDelete } from "react-icons/md";
 import { LiaEditSolid } from "react-icons/lia";
 import { RxUpdate } from "react-icons/rx";
 
+
+
 const TasksList = ({ data, date, deleteTask, id, updateSingleTask }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isEditTask, setisEditTask] = useState(false);
@@ -116,7 +118,7 @@ const TasksList = ({ data, date, deleteTask, id, updateSingleTask }) => {
                     onChange={(e) => setUpdateTask(e.target.value)}
                     autoFocus
                   />
-                  <div>{date}</div>
+                  {/* <div>{date}</div> */}
                 </>
               ) : (
                 <div className={styles.dateAndData}>

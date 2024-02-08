@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // /* eslint-disable no-unused-vars */
 // /* eslint-disable no-undef */
 // import styles from "./TaskInput.module.css";
@@ -119,7 +120,7 @@
 
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./TaskInput.module.css";
 import bannerImage from "../../assets/Images/banner.gif";
 import TasksList from "./../TasksList/TasksList";
@@ -128,9 +129,21 @@ import emptyBox from "../../assets/Images/empty box.gif";
 import { format } from "date-fns";
 import { v4 as uuidv4 } from "uuid";
 
+//Get data from localStorage
+const getDataFromLocalStorage = ()=> {
+  const getData = localStorage.getItem("tasksList")
+  return getData ? JSON.parse(getData) : []
+}
+
 const TaskInput = () => {
   const [task, setTask] = useState("");
-  const [tasksList, setTasksList] = useState([]);
+  const [tasksList, setTasksList] = useState(getDataFromLocalStorage());
+
+
+// Set data LocalStorage
+  useEffect(()=>{
+    localStorage.setItem("tasksList", JSON.stringify(tasksList))
+  }, [tasksList])
 
   const taskHandling = (e) => {
     e.preventDefault();
@@ -152,6 +165,8 @@ const TaskInput = () => {
 
     setTasksList(updatedTasks);
   };
+
+
 
   // Delete Task
   const deleteTask = (id) => {
